@@ -7,7 +7,7 @@
       <configuration>
 	<phases>
 	  <process-resources>org.apache.maven.plugins:maven-resources-plugin:resources</process-resources>
-	  <package></package>
+	  <package>org.renci.maven.plugins:postgresql-dump-plugin:dump</package>
 	  <install>org.apache.maven.plugins:maven-install-plugin:install</install>
 	  <deploy>org.apache.maven.plugins:maven-deploy-plugin:deploy</deploy>
 	</phases>
@@ -19,9 +19,10 @@
       <implementation>org.apache.maven.artifact.handler.DefaultArtifactHandler</implementation>
       <configuration>
         <extension>dump</extension>
-        <type>postgresql-dump</type>
+        <type>dump</type>
         <packaging>postgresql-dump</packaging>
-      </configuration>
+        <addedToClasspath>false</addedToClasspath>
+       </configuration>
     </component>
   </components>
 </component-set>
